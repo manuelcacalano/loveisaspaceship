@@ -1,0 +1,155 @@
+html{
+    background-color:#E9D5CA;
+    font-family: 'Tiro Devanagari Marathi', serif;
+}
+body{
+    padding:2%;
+}
+.header__navbar{
+    display: flex;
+    justify-content: end;
+}
+a,p,h1,h2,h3,h4,h5,h6{
+    color:rgb(102, 58, 98);
+    text-decoration:none;
+}
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#E9D5CA;
+}
+li{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: solid 1px black;
+}
+li:hover{
+    border:none;
+}
+main{
+    background-image: url(https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg);
+    padding: 5%;
+    font-family: 'Tiro Devanagari Marathi', serif;
+}
+.mainArticle{
+    display: flex;
+    justify-content: end;
+    background-color: #E9D5CA;
+    padding: 5%;
+    text-align: start;
+    column-gap: 5%;
+    font-size: medium;
+    flex-direction: row;
+}
+.videowrapper{
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 10%;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.gridContainer{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+.header{
+    grid-area: header;
+    text-align:start;
+    padding:1%;
+}
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+.bio{
+    background-color: #E9D5CA;
+    padding: 5%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 12%;
+    background-color: #E9D5CA;
+    padding: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.discography{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E9D5CA;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.merch{
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: #E9D5CA;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+@media screen and (max-width: 600px){
+    .header{
+        text-align:center;
+    }
+    .header__navbar{
+        justify-content: center;
+    }
+    .mainArticle{
+        flex-direction: column;
+        font-size: small;
+    }
+    .discography{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .merch{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .form{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+};
+
+
+
+
+
+
+
+
+
