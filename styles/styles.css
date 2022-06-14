@@ -1,6 +1,20 @@
 html{
     background-color:#E9D5CA;
     font-family: 'Tiro Devanagari Marathi', serif;
+    animation-name:animacion;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+   
+}
+@keyframes animacion {
+    0%{background-color:#E9D5CA;}
+    50%{background-color:#663a62;}
+    100%{background-color:#E9D5CA;}
+}
+@keyframes animacion2 {
+    0%{color:663a62;}
+    50%{color:#E9D5CA;}
+    100%{color:#663a62;}
 }
 body{
     padding:2%;
@@ -75,6 +89,11 @@ main{
     text-align:start;
     padding:1%;
 }
+.header__logo{
+    animation-name:animacion2;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}
 .main{
     grid-area: main;
     display: flex;
@@ -85,6 +104,11 @@ main{
     grid-area: footer;
     display: flex;
     justify-content: center;
+}
+.footer__text{
+    animation-name:animacion2;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
 }
 .bio{
     background-color: #E9D5CA;
