@@ -1,4 +1,4 @@
-html{
+body{
     background-color:#E9D5CA;
     font-family: 'Tiro Devanagari Marathi', serif;
     animation-name:animacion;
@@ -12,7 +12,7 @@ html{
     100%{background-color:#E9D5CA;}
 }
 @keyframes animacion2 {
-    0%{color:663a62;}
+    0%{color:#663a62;}
     50%{color:#E9D5CA;}
     100%{color:#663a62;}
 }
