@@ -1,0 +1,25 @@
+
+
+@media screen and (max-width: 600px){
+    header h1{
+        text-align:center;
+    }
+    .mainArticle{
+        flex-direction: column;
+        font-size: small;
+    }
+    .discography{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .merch{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .form{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+};

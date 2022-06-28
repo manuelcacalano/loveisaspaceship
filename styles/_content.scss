@@ -1,0 +1,78 @@
+/* Fondo del main */
+main{
+    background-image: url(https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg);
+    padding: 5%;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    .mainArticle{
+        display: flex;
+        justify-content: end;
+        background-color: #E9D5CA;
+        padding: 5%;
+        text-align: start;
+        column-gap: 5%;
+        font-size: medium;
+        flex-direction: row;
+    }
+}
+
+/* Configuracion de video destacado en el index */
+.videowrapper{
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 10%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.gridContainer{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.bio{
+    background-color: #E9D5CA;
+    padding: 5%;
+}
+.form{
+    background-color: #E9D5CA;
+    padding: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.discography{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E9D5CA;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.merch{
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: #E9D5CA;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

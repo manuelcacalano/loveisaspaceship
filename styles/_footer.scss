@@ -1,0 +1,11 @@
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+.footer__text{
+    animation-name:animacion2;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}

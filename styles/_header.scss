@@ -1,0 +1,30 @@
+header{
+    grid-area: header;
+    text-align:start;
+    padding:1%;
+    .headerLogo{
+        animation-name:animacion2;
+        animation-duration:20s;
+        animation-iteration-count: infinite;
+    }
+}
+/* Navbar design */
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#E9D5CA;
+    li{
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border: solid 1px black;
+        &:hover{
+            border:none;
+        }
+    }
+}
+

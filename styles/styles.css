@@ -1,178 +1,184 @@
-/* Color de fondo del sitio */
-body{
-    background-color:#E9D5CA;
-    font-family: 'Tiro Devanagari Marathi', serif;
-    animation-name:animacion;
-    animation-duration:20s;
-    animation-iteration-count: infinite;
-    padding:2%;
-}
 /* Animacion fondo */
 @keyframes animacion {
-    0%{background-color:#E9D5CA;}
-    50%{background-color:#663a62;}
-    100%{background-color:#E9D5CA;}
+  0% {
+    background-color: #E9D5CA;
+  }
+  50% {
+    background-color: #663a62;
+  }
+  100% {
+    background-color: #E9D5CA;
+  }
 }
 /* Animacion textos */
 @keyframes animacion2 {
-    0%{color:#663a62;}
-    50%{color:#E9D5CA;}
-    100%{color:#663a62;}
+  0% {
+    color: #663a62;
+  }
+  50% {
+    color: #E9D5CA;
+  }
+  100% {
+    color: #663a62;
+  }
 }
-.header__navbar{
-    display: flex;
-    justify-content: end;
-}
-a,p,h1,h2,h3,h4,h5,h6{
-    color:rgb(102, 58, 98);
-    text-decoration:none;
-}
-/* Navbar design */
-ul{
-    list-style-type:none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:#E9D5CA;
-}
-li{
-    float: left;
-    color: white;
+@media screen and (max-width: 600px) {
+  header h1 {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border: solid 1px black;
-}
-li:hover{
-    border:none;
-}
-/* Fondo del main */
-main{
-    background-image: url(https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg);
-    padding: 5%;
-    font-family: 'Tiro Devanagari Marathi', serif;
-}
-.mainArticle{
-    display: flex;
-    justify-content: end;
-    background-color: #E9D5CA;
-    padding: 5%;
-    text-align: start;
-    column-gap: 5%;
-    font-size: medium;
-    flex-direction: row;
-}
-/* Configuracion de video destacado en el index */
-.videowrapper{
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-    margin-bottom: 10%;
-}
-.videowrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.gridContainer{
-    display:grid;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
-}
-.header{
-    grid-area: header;
-    text-align:start;
-    padding:1%;
-}
-.headerLogo{
-    animation-name:animacion2;
-    animation-duration:20s;
-    animation-iteration-count: infinite;
-}
-.main{
-    grid-area: main;
-    display: flex;
-    justify-content: start;
+  }
+  .mainArticle {
     flex-direction: column;
-}
-.footer{
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-}
-.footer__text{
-    animation-name:animacion2;
-    animation-duration:20s;
-    animation-iteration-count: infinite;
-}
-.bio{
-    background-color: #E9D5CA;
-    padding: 5%;
-}
-.form{
-    background-color: #E9D5CA;
-    padding: 5%;
+    font-size: small;
+  }
+  .discography {
     margin-left: 0%;
     margin-right: 0%;
-}
-.discography{
+  }
+  .merch {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #E9D5CA;
-    padding: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .form {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }
-.merch{
-    display: block;
-    align-items: center;
-    text-align: center;
-    background-color: #E9D5CA;
-    padding: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+header {
+  grid-area: header;
+  text-align: start;
+  padding: 1%;
 }
-@media screen and (max-width: 600px){
-    .header{
-        text-align:center;
-    }
-    .header__navbar{
-        justify-content: center;
-    }
-    .mainArticle{
-        flex-direction: column;
-        font-size: small;
-    }
-    .discography{
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-    .merch{
-        display: flex;
-        flex-direction: column;
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-    .form{
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-};
+header .headerLogo {
+  animation-name: animacion2;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
 
+/* Navbar design */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E9D5CA;
+}
+ul li {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: solid 1px black;
+}
+ul li:hover {
+  border: none;
+}
 
+/* Fondo del main */
+main {
+  background-image: url(https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg);
+  padding: 5%;
+  font-family: "Tiro Devanagari Marathi", serif;
+}
+main .mainArticle {
+  display: flex;
+  justify-content: end;
+  background-color: #E9D5CA;
+  padding: 5%;
+  text-align: start;
+  column-gap: 5%;
+  font-size: medium;
+  flex-direction: row;
+}
 
+/* Configuracion de video destacado en el index */
+.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 10%;
+}
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
+.gridContainer {
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
 
+.main {
+  grid-area: main;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
 
+.bio {
+  background-color: #E9D5CA;
+  padding: 5%;
+}
 
+.form {
+  background-color: #E9D5CA;
+  padding: 5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
 
+.discography {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E9D5CA;
+  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
+.merch {
+  display: block;
+  align-items: center;
+  text-align: center;
+  background-color: #E9D5CA;
+  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__text {
+  animation-name: animacion2;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+body {
+  background-color: #E9D5CA;
+  font-family: "Tiro Devanagari Marathi", serif;
+  animation-name: animacion;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  padding: 2%;
+}
+body a, body p, body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: rgb(102, 58, 98);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

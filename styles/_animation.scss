@@ -1,0 +1,12 @@
+/* Animacion fondo */
+@keyframes animacion {
+    0%{background-color:#E9D5CA;}
+    50%{background-color:#663a62;}
+    100%{background-color:#E9D5CA;}
+}
+/* Animacion textos */
+@keyframes animacion2 {
+    0%{color:#663a62;}
+    50%{color:#E9D5CA;}
+    100%{color:#663a62;}
+}

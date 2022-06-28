@@ -1,0 +1,19 @@
+
+@import "./animation";
+@import "./breakPoints";
+@import "./header";
+@import "./content";
+@import "./footer";
+body{
+    background-color:#E9D5CA;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    animation-name:animacion;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+    padding:2%;
+    a,p,h1,h2,h3,h4,h5,h6{
+        color:rgb(102, 58, 98);
+        text-decoration:none;
+    }
+}
+
