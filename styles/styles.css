@@ -1,50 +1,3 @@
-/* Animacion fondo */
-@keyframes animacion {
-  0% {
-    background-color: #E9D5CA;
-  }
-  50% {
-    background-color: #663a62;
-  }
-  100% {
-    background-color: #E9D5CA;
-  }
-}
-/* Animacion textos */
-@keyframes animacion2 {
-  0% {
-    color: #663a62;
-  }
-  50% {
-    color: #E9D5CA;
-  }
-  100% {
-    color: #663a62;
-  }
-}
-@media screen and (max-width: 600px) {
-  header h1 {
-    text-align: center;
-  }
-  .mainArticle {
-    flex-direction: column;
-    font-size: small;
-  }
-  .discography {
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  .merch {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  .form {
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-}
 header {
   grid-area: header;
   text-align: start;
@@ -82,7 +35,8 @@ main {
   padding: 5%;
   font-family: "Tiro Devanagari Marathi", serif;
 }
-main .mainArticle {
+
+.mainArticle {
   display: flex;
   justify-content: end;
   background-color: #E9D5CA;
@@ -168,6 +122,53 @@ main .mainArticle {
   animation-iteration-count: infinite;
 }
 
+/* Animacion fondo */
+@keyframes animacion {
+  0% {
+    background-color: #E9D5CA;
+  }
+  50% {
+    background-color: #663a62;
+  }
+  100% {
+    background-color: #E9D5CA;
+  }
+}
+/* Animacion textos */
+@keyframes animacion2 {
+  0% {
+    color: #663a62;
+  }
+  50% {
+    color: #E9D5CA;
+  }
+  100% {
+    color: #663a62;
+  }
+}
+@media screen and (max-width: 600px) {
+  header h1 {
+    text-align: center;
+  }
+  .mainArticle {
+    flex-direction: column;
+    font-size: small;
+  }
+  .discography {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .merch {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .form {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
 body {
   background-color: #E9D5CA;
   font-family: "Tiro Devanagari Marathi", serif;
