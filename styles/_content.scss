@@ -4,11 +4,16 @@ main{
     padding: 5%;
     font-family: 'Tiro Devanagari Marathi', serif; 
 }
+// Bio
+.article{
+    background-color: $beige;
+    padding: 5%;
+}
+// Texto del main
 .mainArticle{
+    @extend .article;
     display: flex;
     justify-content: end;
-    background-color: #E9D5CA;
-    padding: 5%;
     text-align: start;
     column-gap: 5%;
     font-size: medium;
@@ -48,31 +53,23 @@ main{
     flex-direction: column;
 }
 
-.bio{
-    background-color: #E9D5CA;
-    padding: 5%;
-}
 .form{
-    background-color: #E9D5CA;
+    background-color: $beige;
     padding: 5%;
-    margin-left: 0%;
-    margin-right: 0%;
 }
 .discography{
+    @include margins (10%,10%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #E9D5CA;
+    background-color: $beige;
     padding: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 .merch{
+    @include margins (10%,10%);
     display: block;
     align-items: center;
     text-align: center;
-    background-color: #E9D5CA;
+    background-color: $beige;
     padding: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
 }

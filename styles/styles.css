@@ -1,3 +1,23 @@
+.btn-instagram {
+  color: #E9D5CA;
+  background-color: #c35c96;
+  border: 1px, black;
+  padding: 1%;
+  margin-bottom: 3%;
+}
+
+.btn-twitter {
+  color: #E9D5CA;
+  background-color: #77adc2;
+  border: 1px, black;
+  padding: 1%;
+  margin-bottom: 3%;
+}
+
+.contact-title {
+  text-align: center;
+}
+
 header {
   grid-area: header;
   text-align: start;
@@ -36,11 +56,14 @@ main {
   font-family: "Tiro Devanagari Marathi", serif;
 }
 
+.article, .mainArticle {
+  background-color: #E9D5CA;
+  padding: 5%;
+}
+
 .mainArticle {
   display: flex;
   justify-content: end;
-  background-color: #E9D5CA;
-  padding: 5%;
   text-align: start;
   column-gap: 5%;
   font-size: medium;
@@ -78,36 +101,29 @@ main {
   flex-direction: column;
 }
 
-.bio {
-  background-color: #E9D5CA;
-  padding: 5%;
-}
-
 .form {
   background-color: #E9D5CA;
   padding: 5%;
-  margin-left: 0%;
-  margin-right: 0%;
 }
 
 .discography {
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #E9D5CA;
   padding: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .merch {
+  margin-left: 10%;
+  margin-right: 10%;
   display: block;
   align-items: center;
   text-align: center;
   background-color: #E9D5CA;
   padding: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .footer {
@@ -143,7 +159,7 @@ main {
     color: #E9D5CA;
   }
   100% {
-    color: #663a62;
+    color: #E9D5CA;
   }
 }
 @media screen and (max-width: 600px) {
@@ -178,7 +194,7 @@ body {
   padding: 2%;
 }
 body a, body p, body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: rgb(102, 58, 98);
+  color: #663a62;
   text-decoration: none;
 }
 

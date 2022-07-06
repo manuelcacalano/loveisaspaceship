@@ -1,0 +1,5 @@
+// margins laterales
+@mixin margins ($margin-left,$margin-right) {
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
