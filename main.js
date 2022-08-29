@@ -52,9 +52,10 @@ function saludar(){
 } 
 function importe(){
     let agregarProducto=true;
+    let importeTotal=0;
     while(agregarProducto){
         let nuevoImporte = parseInt( prompt("Ingrese el importe a pagar") );
-        let importeTotal = nuevoImporte+importeTotal;
+        importeTotal+=nuevoImporte ;
         agregarProducto = confirm ("Desea agregar otro importe?");
     } 
     let importeFinal = importeTotal*1.15;  /*Service Charge*/
