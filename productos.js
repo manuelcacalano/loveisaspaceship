@@ -1,3 +1,13 @@
+function saludar(){
+    let nombre=prompt("Ingrese su nombre"); 
+    let mensaje=`Bienvenido ${nombre}, a continuación se mostrará una lista de productos del 0 al 6`;
+    if(nombre==("")){
+        alert(`Ingrese un nombre correcto`);
+        let nombre=prompt("Ingrese su nombre"); 
+    }else {
+    alert(mensaje);
+}
+}
 class Producto{
     constructor(nombre,precio,cantidad){
         this.nombre=nombre.toUpperCase();
@@ -21,23 +31,19 @@ productos.push(new Producto ("Remera 5", "2500", "10"));
 productos.push(new Producto ("Remera 6", "2500", "10"));
 productos.push(new Producto ("Totebag1", "1200", "10"));
 
-console.log(productos);
+const productosComprados = [];
 
-for (producto of productos){
-   producto.vender();
-   producto.vender();
-   producto.vender();
-   producto.vender();
-   producto.vender();
+function comprar(){
+alert(JSON.stringify(productos, null, 0));
+let agregarProducto=true;
+let numero;
+while(agregarProducto){
+    numero=parseInt(prompt("Ingrese numero del producto a comprar"));
+    productosComprados.push(productos[numero]);
+    agregarProducto = confirm("Desea agregar algun producto?");
 }
-console.log(productos);
-
-for (producto of productos){
-    producto.vender();
-    producto.vender();
-    producto.vender();
-    producto.vender();
-    producto.vender();
- }
- console.log(productos);
-
+const total = productosComprados.reduce((acumulador, item) => acumulador + item.precio, 0);
+alert(`Su importe a pagar es de $ ${total}`);
+}
+saludar();
+comprar();
