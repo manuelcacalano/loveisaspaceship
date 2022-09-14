@@ -33,9 +33,26 @@ mensajeBienvenida.innerHTML= `<h1>Hola ${nombre}!</h1>`
 
 
 for (const producto of productos){
-    let contenedor = document.createElement("div");
+    let contenedor = document.createElement("button");
+    let carrito = document.createElement("li");
 contenedor.innerHTML = `<h2> Producto: ${producto.nombre} </h2>
-                        <p> $${producto.precio} </p>
-                        <b> Stock: ${producto.cantidad} </b>`;
-document.body.appendChild(contenedor);                         
+                        <p> $${producto.precio} </p>`;
+document.body.appendChild(contenedor);        
+contenedor.onclick = () => {alert(`Compraste el producto ${producto.nombre}`)
+
+producto.vender();
+carrito.innerHTML=`
+<h2>Compraste</h2>
+<h4> Producto: ${producto.nombre} </h4>
+<p> $${producto.precio} </p>
+<b> Stock: ${producto.cantidad} </b>`;
+document.body.appendChild(carrito); 
+
+
+}           
 }
+
+
+
+
+
