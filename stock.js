@@ -1,0 +1,51 @@
+const productos = [
+    {
+        id:1,
+        nombre:"Remera 1",
+        desc:"Remera Love Is A Spaceship EP",
+        precio:2500,
+        img:'src/img/remera1.png',
+        cantidad:1
+    },
+    {
+        id:2,
+        nombre:"Remera 2",
+        desc:"Remera Headlights",
+        precio:2500,
+        img:'src/img/remera2.png',
+        cantidad:1
+    },
+    {
+        id:3,
+        nombre:"Remera 3",
+        desc:"Remera Blood Red Moon",
+        precio:2500,
+        img:'src/img/remera3.png',
+        cantidad:1
+    },
+    {
+        id:4,
+        nombre:"Remera 4",
+        desc:"Remera Blood Red Moon 2",
+        precio:2500,
+        img:'src/img/remera4.png',
+        cantidad:1
+    },
+    {
+        id:5,
+        nombre:"Remera 5",
+        desc:"Remera Half Asleep",
+        precio:2500,
+        img:'src/img/remera5.png',
+        cantidad:1
+    },
+    {
+        id:6,
+        nombre:"Totebag 1",
+        desc:"Totebag Love Is a Spaceship EP",
+        precio:1200,
+        img:'src/img/totebag1.png',
+        cantidad:1
+    },
+]
+
