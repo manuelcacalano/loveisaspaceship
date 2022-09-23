@@ -1,12 +1,16 @@
-const shoppingCart = []
+let shoppingCart
+CarritoLS=JSON.parse(localStorage.getItem(`CarritoLS`));
+if (CarritoLS){
+    shoppingCart=CarritoLS
+}else{
+    shoppingCart=[]
+}
 /* agregar productos*/
 
 const addProduct = (productoId) => {
     const renderCartProducts=() => {
         let producto = productos.find(producto => producto.id==productoId)
         shoppingCart.push(producto)
-       const guardarCarrito = (clave,valor)=>{localStorage.setItem(clave,valor)};
-       guardarCarrito("CarritoLS",JSON.stringify(shoppingCart));
     }
     renderCartProducts()
 }
@@ -32,7 +36,8 @@ const showCart = () => {
                         <button type="button" id="deleteOnCart(${producto.id})" class="btn btn-danger">Eliminar</button>`;
         
         cart.appendChild(div)
-
+const guardarCarrito = (clave,valor)=>{localStorage.setItem(clave,valor)};
+       guardarCarrito("CarritoLS",JSON.stringify(shoppingCart));
         //eliminar del carrito
         const boton = document.getElementById(`deleteOnCart(${producto.id})`)
         boton.addEventListener ('click',()=>{
