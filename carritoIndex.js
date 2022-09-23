@@ -1,28 +1,54 @@
-let carritoDeCompras = []
+const shoppingCart = []
 
-const carritoIndex = (productoId)=>{
+/* agregar productos*/
 
-    
-    const contenedorCarrito = document.getElementById("carrito-contenedor")
+const addProduct = (productoId) => {
+    const renderCartProducts=() => {
+        let producto = productos.find(producto => producto.id==productoId)
+        shoppingCart.push(producto)
+    }
+    renderCartProducts()
+}
 
-    const renderProductosCarrito = ()=> {
-        let producto  = productos.find( producto => producto.id == productoId )
-        carritoDeCompras.push(producto)
-        console.log(carritoDeCompras);
+/*render carrito*/
 
-        producto.cantidad = 1
+const showCart = () => {
+    const cart = document.getElementById ("carrito-contenedor")
 
+    //limpiar carrito
+    cart.innerHTML = ""
+
+    //renderizar items
+
+    shoppingCart.forEach(producto=>{
         let div = document.createElement("div")
         div.classList.add("productoEnCarrito")
 
         div.innerHTML = `<p>${producto.nombre}</p>
                         <p>Precio: ${producto.precio}</p> 
-                        <p id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>`;
-        contenedorCarrito.appendChild(div)
-    }
+                        <p id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>
+                        <button type="button" id="deleteOnCart(${producto.id})" class="btn btn-danger">Eliminar</button>`;
+        
+        cart.appendChild(div)
 
-    renderProductosCarrito()
+        //eliminar del carrito
+        const boton = document.getElementById(`deleteOnCart(${producto.id})`)
+        boton.addEventListener ('click',()=>{
+            deleteOnCart(producto.id)
+        })
+
+    });
+
+    //precio total
+    const totalPrice=document.getElementById('totalPrice')
+    totalPrice.innerText = shoppingCart.reduce((acumulador, item)=>acumulador + item.precio,0)
 }
 
-localStorage.setItem("carritoLS", JSON.stringify(contenedorCarrito));
-const carritoLS = JSON.parse(localStorage.getItem('carritoLS'));
+//funcion eliminar carrito
+
+const deleteOnCart = (productoId) => {
+    const item = shoppingCart.find((producto)=>producto.id===productoId)
+    const index = shoppingCart.indexOf(item)
+    shoppingCart.splice(index, 1)
+    showCart()
+}
