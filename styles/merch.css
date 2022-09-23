@@ -17,6 +17,7 @@ header{
 .card .card-image .card-title {
     color: rgb(108, 17, 133);
     position: unset;
+
 }  
 
 .card{
@@ -56,6 +57,7 @@ header{
   height: 45rem;
   background-color: rgb(199, 164, 185);
   padding:5px;
+  border-radius: 20px;
 }
 
 

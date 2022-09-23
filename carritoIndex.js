@@ -1,14 +1,16 @@
 const shoppingCart = []
-
 /* agregar productos*/
 
 const addProduct = (productoId) => {
     const renderCartProducts=() => {
         let producto = productos.find(producto => producto.id==productoId)
         shoppingCart.push(producto)
+       const guardarCarrito = (clave,valor)=>{localStorage.setItem(clave,valor)};
+       guardarCarrito("CarritoLS",JSON.stringify(shoppingCart));
     }
     renderCartProducts()
 }
+
 
 /*render carrito*/
 
