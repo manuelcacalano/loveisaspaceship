@@ -1,20 +1,8 @@
 header{
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    color: #000;
-}
-header nav {
-        position: relative;
-        right: 30px;
+    height: 5rem;  
 }
 
-header h1{
-    position: relative;
-    left: 20px;
-}
+
 
 
 #producto-contenedor {
@@ -44,7 +32,7 @@ header h1{
   
   display:flex;
   align-items:center;
-  justify-content: center;
+  justify-content: right;
   position:fixed; 
   background-color: transparent;
   width: 100%;
@@ -64,8 +52,8 @@ header h1{
 }
 
 .modal-carrito{
-  width: 40rem;
-  height: 30rem;
+  width: 25rem;
+  height: 45rem;
   background-color: rgb(199, 164, 185);
   padding:5px;
 }
