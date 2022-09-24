@@ -1,4 +1,4 @@
-const shoppingCart = JSON.parse(localStorage.getItem(`CarritoLS`)) || []
+const shoppingCart = JSON.parse(localStorage.getItem(`CarritoLS`)) || [] //Operador OR
 /* agregar productos*/
 
 const addProduct = (productoId) => {
@@ -36,6 +36,14 @@ const showCart = () => {
         const boton = document.getElementById(`deleteOnCart(${producto.id})`)
         boton.addEventListener ('click',()=>{
             deleteOnCart(producto.id)
+        })
+
+        const comprar = document.getElementById("comprar")
+        comprar.addEventListener('click',()=>{
+            console.log(...shoppingCart); //Spread
+            localStorage.clear();
+            cart.innerHTML=""
+            totalPrice.innerText=``;
         })
 
     });

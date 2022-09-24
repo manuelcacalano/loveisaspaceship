@@ -30,3 +30,10 @@ const mostrarProductos = (productos) => {
 
 mostrarProductos(productos)
 
+const usuario = {
+    nombre:prompt(`Ingrese su nombre`),
+    cel:parseInt(prompt("Ingrese su número de teléfono"))
+}
+
+
+const {nombre, cel} = usuario   //Desestructuración
