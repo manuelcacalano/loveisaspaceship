@@ -41,12 +41,17 @@ const showCart = () => {
         const comprar = document.getElementById("comprar")
         comprar.addEventListener('click',()=>{
             console.log(...shoppingCart); //Spread
-            localStorage.clear();
-            cart.innerHTML=""
-            totalPrice.innerText=``;
+           localStorage.clear();
+            cart.innerHTML="";
+            totalPrice.innerText=``
+            /// SweetAlert
+            Swal.fire(
+                'Muy bien!',
+                'Realizaste la compra',
+                'success'
+            );
         })
-
-    });
+    })
 
     //precio total
     const totalPrice=document.getElementById('totalPrice')

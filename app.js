@@ -30,10 +30,17 @@ const mostrarProductos = (productos) => {
 
 mostrarProductos(productos)
 
-const usuario = {
+let usuario
+let usuarioLS = JSON.parse(localStorage.getItem("usuario"));
+if(usuarioLS){
+    usuario=usuarioLS
+}else{usuario = {
     nombre:prompt(`Ingrese su nombre`),
     cel:parseInt(prompt("Ingrese su número de teléfono"))
-}
+}}
+
 
 
 const {nombre, cel} = usuario   //Desestructuración
+
+localStorage.setItem("usuario", JSON.stringify(usuario));
