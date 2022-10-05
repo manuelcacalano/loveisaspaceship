@@ -1,4 +1,4 @@
-const mostrarProductos = (productos) => {
+/*const mostrarProductos = (productos) => {
     const contenedorProductos = document.getElementById("producto-contenedor")
 
     productos.forEach(producto => {
@@ -22,6 +22,7 @@ const mostrarProductos = (productos) => {
             addProduct(producto.id)
             showCart(producto)
             console.log(shoppingCart);
+            Swal.fire(`Agregaste ${producto.desc} al carrito!`)
         })
       
     })
@@ -29,18 +30,37 @@ const mostrarProductos = (productos) => {
 
 
 mostrarProductos(productos)
-
-let usuario
-let usuarioLS = JSON.parse(localStorage.getItem("usuario"));
-if(usuarioLS){
-    usuario=usuarioLS
-}else{usuario = {
-    nombre:prompt(`Ingrese su nombre`),
-    cel:parseInt(prompt("Ingrese su número de teléfono"))
-}}
+*/
 
 
+////tp fetch
 
-const {nombre, cel} = usuario   //Desestructuración
+const traerDatos = async () => {
+    const respuesta = await fetch('./stock.json' , {mode: "no-cors"});
+    const data = await respuesta.json();
+    let listado = document.getElementById("producto-contenedor");
+    data.forEach(item => {
+        const div = document.createElement("div")
+        div.classList.add("card")
+        div.innerHTML += `<div class="card" style="width: 18rem;">
+                            <img src="${item.img}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.nombre}</h5>
+                                <p class="card-text">Descripción:  ${item.desc}</p>
+                                <p class="card-text">Precio:$ ${item.precio}</p>
+                                <button class="btn btn-primary" id=boton${item.id}>Añadir al carrito</button>
+                            </div>
+                        </div>`;
 
-localStorage.setItem("usuario", JSON.stringify(usuario));
+        listado.appendChild(div);
+        const boton = document.getElementById( `boton${item.id}` )
+
+        boton.addEventListener('click', ()=> {
+            addProduct(item.id)
+            showCart(item)
+            console.log(shoppingCart);
+            Swal.fire(`Agregaste ${item.nombre} al carrito!`)
+        })
+    });
+};
+traerDatos();
