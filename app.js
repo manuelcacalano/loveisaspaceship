@@ -34,12 +34,14 @@ mostrarProductos(productos)
 
 
 ////tp fetch
+let productos = []
 
 const traerDatos = async () => {
-    const respuesta = await fetch('./stock.json' , {mode: "no-cors"});
+    const respuesta = await fetch('../stock.json' , {mode: "no-cors"});
     const data = await respuesta.json();
     let listado = document.getElementById("producto-contenedor");
-    data.forEach(item => {
+    productos=[...data]
+    productos.forEach( item => {
         const div = document.createElement("div")
         div.classList.add("card")
         div.innerHTML += `<div class="card" style="width: 18rem;">
