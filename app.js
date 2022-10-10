@@ -62,7 +62,8 @@ const traerDatos = async () => {
             showCart(item)
             console.log(shoppingCart);
             Swal.fire(`Agregaste ${item.nombre} al carrito!`)
-        })
+        }
+        )
     });
 };
 traerDatos();
