@@ -41,6 +41,7 @@ const traerDatos = async () => {
     const data = await respuesta.json();
     let listado = document.getElementById("producto-contenedor");
     productos=[...data]
+    productosOrig=[...data]
     productos.forEach( item => {
         const div = document.createElement("div")
         div.classList.add("card")
@@ -61,8 +62,7 @@ const traerDatos = async () => {
             addProduct(item.id)
             showCart(item)
             console.log(shoppingCart);
-            Swal.fire(`Agregaste ${item.nombre} al carrito!`)
-        }
+            Swal.fire(`Agregaste ${item.desc} al carrito!`)}
         )
     });
 };

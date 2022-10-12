@@ -5,19 +5,12 @@ const addProduct = (productoId) => {
     const renderCartProducts=() => {
         let producto = productos.find(producto => producto.id==productoId)
       const productoRepetido = shoppingCart.find(productoRepetido=>productoRepetido.id==productoId);
-      const productoRepetido1200 = shoppingCart.find(productoRepetido1200=>productoRepetido1200.id===6);
-      if(productoRepetido1200){
-        productoRepetido1200.cantidad++; 
-        productoRepetido1200.precio=productoRepetido1200.precio+1200;
-      }else{
       if(productoRepetido){
-            productoRepetido.cantidad++; 
-            productoRepetido.precio=producto.precio+2500;
+        Swal.fire(`Ese producto ya se encuentra en tu carrito`)
+        Swal.fire(null)
         }else{
         shoppingCart.push(producto)
         } 
-    }
-
     }
     renderCartProducts()
 }
@@ -39,7 +32,6 @@ const showCart = () => {
 
         div.innerHTML = `<p>${producto.nombre}</p>
                         <p>Precio: ${producto.precio}</p> 
-                        <p id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>
                         <button type="button" id="deleteOnCart(${producto.id})" class="btn btn-danger">Eliminar</button>`;
         
         cart.appendChild(div)
@@ -49,8 +41,10 @@ const showCart = () => {
         const boton = document.getElementById(`deleteOnCart(${producto.id})`)
         boton.addEventListener ('click',()=>{
             deleteOnCart(producto.id)
+            localStorage.clear();
         })
 
+        //comprar
         const comprar = document.getElementById("comprar")
         comprar.addEventListener('click',()=>{
             console.log(...shoppingCart); //Spread
