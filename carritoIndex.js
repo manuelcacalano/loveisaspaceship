@@ -5,13 +5,18 @@ const addProduct = (productoId) => {
     const renderCartProducts=() => {
         let producto = productos.find(producto => producto.id==productoId)
       const productoRepetido = shoppingCart.find(productoRepetido=>productoRepetido.id==productoId);
+      const productoRepetido1200 = shoppingCart.find(productoRepetido1200=>productoRepetido1200.id===6);
+      if(productoRepetido1200){
+        productoRepetido1200.cantidad++; 
+        productoRepetido1200.precio=productoRepetido1200.precio+1200;
+      }else{
       if(productoRepetido){
             productoRepetido.cantidad++; 
-            productoRepetido.precio=producto.precio*productoRepetido.cantidad;
+            productoRepetido.precio=producto.precio+2500;
         }else{
         shoppingCart.push(producto)
         } 
-
+    }
 
     }
     renderCartProducts()
