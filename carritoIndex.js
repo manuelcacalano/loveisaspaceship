@@ -4,10 +4,10 @@ const shoppingCart = JSON.parse(localStorage.getItem(`CarritoLS`)) || [] //Opera
 const addProduct = (productoId) => {
     const renderCartProducts=() => {
         let producto = productos.find(producto => producto.id==productoId)
-      const productoRepetido = shoppingCart.find(productoRepetido=>producto.id===productoId);
+      const productoRepetido = shoppingCart.find(productoRepetido=>productoRepetido.id==productoId);
       if(productoRepetido){
             productoRepetido.cantidad++; 
-            productoRepetido.precio*=productoRepetido.cantidad;
+            productoRepetido.precio=producto.precio*productoRepetido.cantidad;
         }else{
         shoppingCart.push(producto)
         } 
